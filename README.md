@@ -48,6 +48,11 @@ import { SomeExport } from "@monogatari/core";
 // Use in your components or services
 ```
 
+Demo route:
+
+- Visit `/monogatari` for a client-only dynamic import demo with comments.
+- The page is intended as a temporary placeholder and can be deleted later.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
