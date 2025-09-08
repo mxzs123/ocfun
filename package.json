@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "rimraf .next/types && tsc --noEmit",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "check": "npm run -s type-check && npm run -s lint && npm run -s format",
@@ -30,6 +30,7 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

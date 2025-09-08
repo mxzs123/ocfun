@@ -41,17 +41,7 @@ Install:
 npm i @monogatari/core@2.6.0 --save-exact
 ```
 
-Basic usage (example):
-
-```ts
-import { SomeExport } from "@monogatari/core";
-// Use in your components or services
-```
-
-Demo route:
-
-- Visit `/monogatari` for a client-only dynamic import demo with comments.
-- The page is intended as a temporary placeholder and can be deleted later.
+Note: The library is installed and ready; integrate in real pages/components when needed.
 
 ## Learn More
 
