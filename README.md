@@ -1,24 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). Pinned to Next.js 14 + React 18, using npm and Tailwind CSS.
 
 ## Getting Started
 
-First, run the development server:
+### Node version
+
+Use Node 20 (via `.nvmrc`). If you use nvm:
 
 ```bash
+nvm use || (nvm install 20 && nvm use 20)
+```
+
+### Install and run
+
+```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Scripts
+
+- `npm run dev` — start dev server (Turbopack)
+- `npm run build` — production build
+- `npm start` — run production server
+- `npm run lint` — run ESLint
+- `npm run lint:fix` — fix lint issues
+- `npm run type-check` — TS type-check only
+- `npm run format` — check Prettier formatting
+- `npm run format:fix` — write Prettier formatting
+- `npm run check` — type-check + lint + format check
+
+## Monogatari
+
+Install:
+
+```bash
+npm i @monogatari/core@2.6.0 --save-exact
+```
+
+Basic usage (example):
+
+```ts
+import { SomeExport } from "@monogatari/core";
+// Use in your components or services
+```
 
 ## Learn More
 

@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "check": "npm run -s type-check && npm run -s lint && npm run -s format",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@monogatari/core": "2.6.0",
     "next": "14.2.32",
     "react": "18.3.1",
     "react-dom": "18.3.1"
@@ -20,7 +27,18 @@
     "@types/react-dom": "^19",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.0.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
